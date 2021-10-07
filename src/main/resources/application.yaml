@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    username: music_artist
+    password: music_artist
+    url: jdbc:mysql://localhost:3306/music_artist_db
+    
+logging:
+  level:
+    root: warn
+    '[com.promineotech]': debug
