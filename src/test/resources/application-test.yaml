@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:music_artist
+    url: jdbc:h2:mem:music_artist_db
     
 logging:
   level:

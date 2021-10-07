@@ -1,4 +1,4 @@
-Use music_artist_db; 
+USE music_artist; 
 
 INSERT INTO Artists (Artist_name, year_started, year_ended, place_of_origin, instagram_handle)
 VALUES

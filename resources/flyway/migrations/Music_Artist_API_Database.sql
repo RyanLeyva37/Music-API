@@ -1,7 +1,3 @@
-DROP DATABASE IF EXISTS music_artist_db;
-CREATE DATABASE music_artist_db;
-USE music_artist_db;
-
 DROP TABLE IF EXISTS Artist;
 DROP TABLE IF EXISTS Album;
 DROP TABLE IF EXISTS Tour;
