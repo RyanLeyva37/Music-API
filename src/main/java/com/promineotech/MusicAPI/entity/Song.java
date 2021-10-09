@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 public class Song {
 
 	private long albumPrimaryKey;
+
 	private String songName;
 	private String funFact;
 	private String dateReleased;
