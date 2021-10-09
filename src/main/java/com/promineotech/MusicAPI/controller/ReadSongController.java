@@ -42,7 +42,7 @@ public interface ReadSongController {
               content = @Content(mediaType = "application/json")),
           
           @ApiResponse(responseCode = "404", 
-              description =  "No Jeeps were found with the input criteria",
+              description =  "No songs were found with the input criteria",
           content = @Content(mediaType = "application/json")),
           
           @ApiResponse(responseCode = "500", 

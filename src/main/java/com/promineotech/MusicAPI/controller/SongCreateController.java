@@ -31,7 +31,7 @@ public interface SongCreateController {
 	
 	
 	  @Operation(summary = "Create a song record",
-		      description = "Returns the created Jeep",
+		      description = "Returns the created Song",
 		      responses = {
 		          @ApiResponse(responseCode = "201",
 		              description = "The created Song is returned",
