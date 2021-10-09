@@ -23,3 +23,7 @@ public class MusicApiApplication extends SpringBootServletInitializer {
 		
         new SpringApplicationBuilder(MusicApiApplication.class)
         .run(args);
+
+	}
+
+}

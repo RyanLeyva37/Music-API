@@ -22,13 +22,13 @@ public class DefaultSongCreateService implements SongCreateService{
 	@Transactional
 	@Override
 	public Song createSong(SongRequest request) {
-		
-		int albumId = request.getAlbumId();
+		long id = -999;
+		long albumId = request.getAlbumId();
 		String songName = request.getSongName();
 		String funFact = request.getFunFact();
 		String dateReleased = request.getDateReleased();
 		List<String> artists = request.getArtists();
-		Song song = new Song(albumId, songName, funFact, dateReleased, artists);
+		Song song = new Song(id, albumId, songName, funFact, dateReleased, artists);
 		return songCreateDao.saveSong(song);
 	}
 

@@ -13,6 +13,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Song {
 
+	
+	  private Long SongPK;
 	private long albumPrimaryKey;
 
 	private String songName;

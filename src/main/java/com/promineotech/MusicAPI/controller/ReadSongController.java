@@ -26,7 +26,7 @@ import io.swagger.v3.oas.annotations.Parameter;
 @RequestMapping("/readSong")
 @OpenAPIDefinition(info = @Info(title = "Song reading service"), servers = {
     @Server(url = "http://localhost:3306", description = "Local server.")})
-public interface SongReadController {
+public interface ReadSongController {
 	
   
   

@@ -44,9 +44,10 @@ public class DefaultSongCreateDao implements SongCreateDao{
 		KeyHolder key = new GeneratedKeyHolder();
 		jdbcTemplate.update(params.sql, params.source, key);
 		Long songPK = key.getKey().longValue();
-		
+		song.setSongPK(songPK);
+		this.saveSongArtistRelationship(song.getArtists(), songPK);
 		// TODO Auto-generated method stub
-		return null;
+		return song;
 	}
 	
 	
@@ -106,6 +107,7 @@ public class DefaultSongCreateDao implements SongCreateDao{
 			  try {
 				  long parse = Long.parseLong(id);
 				  SqlParams params =generateInsertSql(songId, parse);
+				  jdbcTemplate.update(params.sql, params.source);
 			  }catch(Exception e) {
 				  
 			  }

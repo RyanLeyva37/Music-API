@@ -34,7 +34,7 @@ public interface SongCreateController {
 		      description = "Returns the created Jeep",
 		      responses = {
 		          @ApiResponse(responseCode = "201",
-		              description = "The created Jeep is returned",
+		              description = "The created Song is returned",
 		              content = @Content(mediaType = "application/json", 
 		              schema = @Schema(implementation = Song.class))),
 		          
@@ -43,7 +43,7 @@ public interface SongCreateController {
 		              content = @Content(mediaType = "application/json")),
 		          
 		          @ApiResponse(responseCode = "404", 
-		              description =  "A Jeep component was not found with the input criteria",
+		              description =  "A Song component was not found with the input criteria",
 		          content = @Content(mediaType = "application/json")),
 		          
 		          @ApiResponse(responseCode = "500", 
