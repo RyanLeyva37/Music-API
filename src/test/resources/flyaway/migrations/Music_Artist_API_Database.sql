@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+DROP DATABASE IF EXISTS music_artist_db;
+CREATE DATABASE music_artist_db;
+USE music_artist_db;
+
+DROP TABLE IF EXISTS Artists;
+DROP TABLE IF EXISTS Albums;
+DROP TABLE IF EXISTS Festivals_Played;
+DROP TABLE IF EXISTS Songs;
+>>>>>>> main
 DROP TABLE IF EXISTS Song_Artist;
 DROP TABLE IF EXISTS Songs;
 DROP TABLE IF EXISTS Albums;

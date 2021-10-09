@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+USE music_artist; 
+
+>>>>>>> main
 INSERT INTO Artists (Artist_name, year_started, year_ended, place_of_origin, instagram_handle)
 VALUES
 ('Tame Impala', 2007, 9999, 'Perth', 'tameimpala'),

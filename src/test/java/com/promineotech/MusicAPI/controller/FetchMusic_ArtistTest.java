@@ -42,9 +42,18 @@ class FetchMusic_ArtistTest extends FetchMusic_ArtistTestSupport{
 	 @LocalServerPort
 	 private int serverPort;
 	
+<<<<<<< HEAD
 	/**
 	 *  
 	 */
+=======
+	 @Test
+	 void testDb() {
+		 
+	 }
+	
+	@Disabled
+>>>>>>> main
 	@Test
 	void testthatartistsarereturnedwhenvalidplaceoforiginissupplied() {
 		Locations place_of_origin = Locations.Bergen_Norway;
