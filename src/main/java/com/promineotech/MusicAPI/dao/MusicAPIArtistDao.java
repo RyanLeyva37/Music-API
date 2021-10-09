@@ -9,4 +9,5 @@ public interface MusicAPIArtistDao {
 
 	List<Artists> fetchArtists(Locations place_of_origin);
 
+
 }

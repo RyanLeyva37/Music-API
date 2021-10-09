@@ -1,10 +1,8 @@
-Use music_artist_db; 
-
 INSERT INTO Artists (Artist_name, year_started, year_ended, place_of_origin, instagram_handle)
 VALUES
-('Tame Impala', '2007', '9999', 'Perth, Western Australia', 'tameimpala'),
-('The Strokes', '1998', '9999', 'New York City, New York', 'thestrokes'),
-('Kygo', '2010', '9999', 'Bergen, Norway', 'kygomusic');
+('Tame Impala', '2007', '9999', 'Perth_Western_Australia', 'tameimpala'),
+('The Strokes', '1998', '9999', 'New_York_City_New_York', 'thestrokes'),
+('Kygo', '2010', '9999', 'Bergen_Norway', 'kygomusic');
 
 INSERT INTO Albums (Artist_id, Album_name, Year_released, Genre, RIAA_rating)
 VALUES 

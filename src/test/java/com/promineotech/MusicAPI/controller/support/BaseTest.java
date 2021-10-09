@@ -14,7 +14,11 @@ public class BaseTest {
 	@Getter
 	private TestRestTemplate restTemplate;
 	
-	protected String getBaseUri() {
+	protected String getBaseUriForReadArtist() {
+		return String.format("http://localhost:%d/Music_Artists", serverPort);
+	}
+	
+	protected String getBaseUriForCreateArtist() {
 		return String.format("http://localhost:%d/Music_Artists", serverPort);
 	}
 }

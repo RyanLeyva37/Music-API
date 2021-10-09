@@ -24,5 +24,8 @@ public class DefaultMusicAPIArtistController implements MusicAPIArtistController
 		log.debug("place_of_origin={}", place_of_origin);
 		return musicAPIArtistService.fetchArtists(place_of_origin); 
 	}
+	
+	
+	
 		
 }

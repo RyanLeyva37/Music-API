@@ -1,19 +1,15 @@
-DROP DATABASE IF EXISTS music_artist_db;
-CREATE DATABASE music_artist_db;
-USE music_artist_db;
-
-DROP TABLE IF EXISTS Artist;
-DROP TABLE IF EXISTS Album;
-DROP TABLE IF EXISTS Tour;
-DROP TABLE IF EXISTS Song;
+DROP TABLE IF EXISTS Artists;
+DROP TABLE IF EXISTS Albums;
+DROP TABLE IF EXISTS Festivals_Played;
+DROP TABLE IF EXISTS Songs;
 DROP TABLE IF EXISTS Song_Artist;
 
 CREATE TABLE Artists (
 Artist_id INT NOT NULL AUTO_INCREMENT,
-Artist_name VARCHAR(100) NOT NULL,
-year_started INT NOT NULL,
+Artist_name VARCHAR(100),
+year_started INT,
 year_ended INT,
-place_of_origin VARCHAR(50) NOT NULL,
+place_of_origin VARCHAR(100),
 instagram_handle VARCHAR(50),
 PRIMARY KEY (Artist_id)
 );
