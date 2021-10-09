@@ -41,6 +41,7 @@ public class DefaultMusicAPICreateArtistDao implements MusicAPICreateArtistDao {
 								.addValue("year_ended", artist.getYear_ended())
 								.addValue("place_of_origin", artist.getPlace_of_origin())
 								.addValue("instagram_handle", artist.getInstagram_handle());
+		
 		// @formatter:on
 		KeyHolder keyHolder = new GeneratedKeyHolder();
 

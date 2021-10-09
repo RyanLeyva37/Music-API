@@ -19,7 +19,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.servers.Server;
 
 @RequestMapping("/Music_Artists")
-@OpenAPIDefinition(info = @Info(title = "Update Artist Service"), servers = {
+@OpenAPIDefinition(info = @Info(title = "Delete Artist Service"), servers = {
 @Server(url = "http://localhost:8080", description = "Local Server")})
 
 public interface MusicAPIDeleteArtistController {
@@ -50,7 +50,7 @@ public interface MusicAPIDeleteArtistController {
 							@Parameter(
 									name = "Artist_name", 
 									allowEmptyValue = false, 
-									required = true, 
+									required = false, 
 									description = "The Artist's name (i.e., 'Led Zeppelin')"),
 							
 					}

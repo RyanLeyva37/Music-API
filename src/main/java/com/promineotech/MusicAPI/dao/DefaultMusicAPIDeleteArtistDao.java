@@ -31,21 +31,14 @@ public class DefaultMusicAPIDeleteArtistDao implements MusicAPIDeleteArtistDao {
 						+ "WHERE artist_name = :artist_name";
 				
 				SqlParameterSource sqlParams = new 
-						MapSqlParameterSource("artist_name", artist.getArtist_name())
-										.addValue("year_started", artist.getYear_started())
-										.addValue("year_ended", artist.getYear_ended())
-										.addValue("place_of_origin", artist.getPlace_of_origin())
-										.addValue("instagram_handle", artist.getInstagram_handle());
+						MapSqlParameterSource("artist_name", artist.getArtist_name());
 				// @formatter:on
-				KeyHolder keyHolder = new GeneratedKeyHolder();
 
-				jdbcTemplate.update(sql, sqlParams, keyHolder);
+				jdbcTemplate.update(sql, sqlParams);
 
-				int artist_id = keyHolder.getKey().intValue();
 
 				// @formatter:off
 				return Artists.builder()
-						.artist_id(artist_id)
 						.artist_name(artist.getArtist_name())
 						.year_started(artist.getYear_started())
 						.year_ended(artist.getYear_ended())

@@ -18,8 +18,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 
-@Getter
-@Setter
+
 public class Artists implements Comparable<Artists> {
 	private int artist_id;
 	private String artist_name;
@@ -28,16 +27,12 @@ public class Artists implements Comparable<Artists> {
 	private Locations place_of_origin;
 	private String instagram_handle;
 	
-	@JsonIgnore
-	public int getartist_id() {
-		return artist_id;
-	}
 	
 	@Override
 	public int compareTo(Artists that) {
 		// @formatter:off
 		return Comparator
-				.comparing(Artists::getartist_id)
+				.comparing(Artists::getArtist_id)
 				.compare(this, that);
 		// @formatter:on
 	}
