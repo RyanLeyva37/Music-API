@@ -6,5 +6,5 @@ public enum Locations {
     Bergen_Norway
     
     
-    
+
 }

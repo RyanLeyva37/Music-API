@@ -1,4 +1,6 @@
-   package com.promineotech.MusicAPI.entity;
+
+package com.promineotech.MusicAPI.entity;
+
 import java.util.Comparator;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -6,6 +8,9 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+
+import lombok.EqualsAndHashCode;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -17,6 +22,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @Getter
 @Setter
+
 public class Artists implements Comparable<Artists> {
 	private int artist_id;
 	private String artist_name;
@@ -29,6 +35,7 @@ public class Artists implements Comparable<Artists> {
 	public int getartist_id() {
 		return artist_id;
 	}
+
 	
 	@Override
 	public int compareTo(Artists that) {
@@ -39,3 +46,4 @@ public class Artists implements Comparable<Artists> {
 		// @formatter:on
 	}
 }
+

@@ -6,18 +6,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
-@SpringBootApplication
-public class MusicApiApplication extends SpringBootServletInitializer {
-	
-	
-	//@Autowired
-	//private ApplicationContext context;
-	
-	
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application){
-       return application.sources(MusicApiApplication.class);
-    }
+
+import com.promineotech.ComponentScanMarker;
+
+@SpringBootApplication(scanBasePackageClasses = { ComponentScanMarker.class })
+public class MusicApiApplication {
 
 	public static void main(String[] args) {
 		
