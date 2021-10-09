@@ -3,6 +3,7 @@ package com.promineotech.MusicAPI.controller;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.apache.catalina.loader.ResourceEntry;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -39,8 +40,9 @@ class CreateArtistTest extends CreateArtistTestSupport {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
+	
 	@Test
-	void testCreateAtistReturnSuccess201() {
+	void testCreateArtistReturnSuccess201() {
 		// Given: an order as JSON
 		final String body = createArtistBody();
 		
@@ -62,11 +64,11 @@ class CreateArtistTest extends CreateArtistTestSupport {
 		// Then: a 201 status is returned
 		assertEquals(HttpStatus.CREATED, response.getStatusCode());
 		assertNotNull(artist);
-		assertEquals("Tame Impala", artist.getArtist_name());
-		assertEquals("2007", artist.getYear_started());
+		assertEquals("Tycho", artist.getArtist_name());
+		assertEquals("2002", artist.getYear_started());
 		assertEquals("9999", artist.getYear_ended());
-		assertEquals("Perth, Western Australia", artist.getPlace_of_origin());
-		assertEquals("tameimpala", artist.getInstagram_handle());
+		assertEquals("Sacramento", artist.getPlace_of_origin());
+		assertEquals("tychomusic", artist.getInstagram_handle());
 		assertEquals(rowsInUserTable + 1, JdbcTestUtils.countRowsInTable(jdbcTemplate, "Artists"));
 		// And: the returned order is correct
 	}

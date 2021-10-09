@@ -3,6 +3,7 @@ package com.promineotech.MusicAPI.controller;
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,8 +26,8 @@ import io.swagger.v3.oas.annotations.servers.Server;
 
 
 @RequestMapping("/Music_Artists")
-@OpenAPIDefinition(info = @Info(title = "Create Artist Service"), servers = {
-@Server(url = "http://localhost:3306", description = "Local Server.")})
+@OpenAPIDefinition(info = @Info(title = "Create Artist Service"), 
+servers = {@Server(url = "http://localhost:8080", description = "Local Server") })
 
 public interface MusicAPICreateArtistController {
 	// @formatter:off
@@ -37,20 +38,20 @@ public interface MusicAPICreateArtistController {
 						@ApiResponse(
 								responseCode = "201", 
 								description = "The created Artist is returned", 
-								content = @Content(mediaType = "application/json", 
+								content = @Content(mediaType = MediaType.APPLICATION_JSON_VALUE, 
 								schema = @Schema(implementation = Artists.class))),
 						@ApiResponse(
 								responseCode = "400", 
 								description = "The request parameters are invalid", 
-								content = @Content(mediaType = "application/json")),
+								content = @Content(mediaType = MediaType.APPLICATION_JSON_VALUE)),
 						@ApiResponse(
 								responseCode = "404", 
 								description = "An artist detail was not found with the input criteria", 
-								content = @Content(mediaType = "application/json")),
+								content = @Content(mediaType = MediaType.APPLICATION_JSON_VALUE)),
 						@ApiResponse(
 								responseCode = "500", 
 								description = "An unplanned error ocurred.", 
-								content = @Content(mediaType = "application/json"))
+								content = @Content(mediaType = MediaType.APPLICATION_JSON_VALUE))
 				},
 				parameters = {
 						@Parameter(

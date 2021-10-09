@@ -8,11 +8,11 @@ public class CreateArtistTestSupport extends BaseTest {
 	protected String createArtistBody() {
 		// @formatter:off
 		return "{\n"
-				+ "	\"artist_name\":\"Tame Impala\",\n"
-			    + "	\"year_started\":\"2007\",\n"
+				+ "	\"artist_name\":\"Tycho\",\n"
+			    + "	\"year_started\":\"2002\",\n"
 			    + "	\"year_ended\":\"9999\",\n"
-			    + "	\"place_of_origin\":\"Perth, Western Australia\",\n"
-			    + " \"instagram_handle\":\"tameimpala\",\n"
+			    + "	\"place_of_origin\":\"Sacramento\",\n"
+			    + " \"instagram_handle\":\"tychomusic\",\n"
 				+ "}";
 		// @formatter:on
 	}

@@ -1,5 +1,7 @@
 package com.promineotech.MusicAPI.dao;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -9,6 +11,7 @@ import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Component;
 
 import com.promineotech.MusicAPI.entity.Artists;
+import com.promineotech.rowmapper.ArtistRowMapper;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -31,6 +34,7 @@ public class DefaultMusicAPICreateArtistDao implements MusicAPICreateArtistDao {
 				+ "(artist_name, year_started, year_ended, place_of_origin, instagram_handle) VALUES "
 				+ "(:artist_name, :year_started, :year_ended, :place_of_origin, :instagram_handle)";
 		
+	
 		SqlParameterSource sqlParams = new 
 				MapSqlParameterSource("artist_name", artist.getArtist_name())
 								.addValue("year_started", artist.getYear_started())

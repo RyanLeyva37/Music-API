@@ -22,7 +22,7 @@ import io.swagger.v3.oas.annotations.Parameter;
 
 @RequestMapping("/Music_Artists")
 @OpenAPIDefinition(info = @Info(title = "Artist Service"), servers = {
-		@Server(url = "http://localhost:3306", description = "Local Server.")})
+		@Server(url = "http://localhost:8080", description = "Local Server")})
 
 public interface MusicAPIArtistController {
 	
