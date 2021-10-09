@@ -16,7 +16,6 @@ public class SongRequest {
 	@NotNull
 	private int albumId;
 	
-	@NotNull
 	@Length(max = 100)
 	@Pattern(regexp = "[\\w\\s]*")
 	private String songName;

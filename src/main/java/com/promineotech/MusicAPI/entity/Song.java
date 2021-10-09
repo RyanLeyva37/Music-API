@@ -13,7 +13,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Song {
 
-	private int albumPrimaryKey;
+
+	  private Long SongPK;
+	private long albumPrimaryKey;
+
 	private String songName;
 	private String funFact;
 	private String dateReleased;
